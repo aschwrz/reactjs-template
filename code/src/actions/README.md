@@ -1,0 +1,1 @@
+The acrtion folder offers custom actions (if needed), normally used for reducer handling.

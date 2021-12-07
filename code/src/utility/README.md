@@ -1,0 +1,1 @@
+The utility folder provides smaller misc. functions that are not a handled in a service.

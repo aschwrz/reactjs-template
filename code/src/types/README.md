@@ -1,0 +1,1 @@
+The types folder offers object types.

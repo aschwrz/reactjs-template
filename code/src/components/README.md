@@ -1,0 +1,1 @@
+The component folder offers react ui components and subcomponents for visualizing the application.

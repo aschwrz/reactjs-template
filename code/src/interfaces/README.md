@@ -1,0 +1,1 @@
+The interfaces folder offers interfaces for object property declarations.

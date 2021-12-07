@@ -1,0 +1,2 @@
+The context folder offers context functionality like context api (incl. reducer) setup or redux usage.
+Reacts context API as a on-board tool is preferable to 3rd party tools like Redux without good justification.
