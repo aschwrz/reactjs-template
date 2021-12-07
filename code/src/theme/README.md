@@ -1,0 +1,1 @@
+The themes folder offers a possibility for general application theming.
