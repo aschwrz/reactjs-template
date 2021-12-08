@@ -1,5 +1,12 @@
 /**
  * Axios usage explained in https://github.com/axios/axios
+ * 
+ * With json-server, there is a full mockup server prepared to mock
+ * apis until they are developed for further usage
+ * 
+ * json-server usage is explained in https://github.com/typicode/json-server
+ * bigger amounts of testdata can be created using a data templating language like jsonnet
+ * jsonnet usage is explained in https://jsonnet.org/
  */
 
 import axios, { AxiosRequestConfig, AxiosResponse } from "axios";
