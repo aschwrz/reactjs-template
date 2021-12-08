@@ -12,5 +12,13 @@
 export const EnvService = {
     getExample: () : string => {
         return process.env.REACT_APP_EXAMPLE!;
+    },
+
+    getApiExample: () : string => {
+        return process.env.REACT_APP_API_EXAMPLE!;
+    },
+
+    getTokenExample: () : string => {
+        return process.env.REACT_APP_AUTH_TOKEN!;
     }
 }
