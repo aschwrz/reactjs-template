@@ -5,6 +5,7 @@ import { CustomTheme } from '../theme/theme';
 import { Subcomponent } from './subcomponent/subcomponent';
 import { AuthService } from '../service/auth-service';
 import { NoAuth } from './auth/no-auth';
+import { ErrorHandler } from './error/error';
 
 export const Main = () => {
 
@@ -20,18 +21,20 @@ export const Main = () => {
 
         // Theming explained in  https://mui.com/customization/default-theme/
         <ThemeProvider theme={CustomTheme.getTheme()}>
-
-            {/* Routing explained in https://reactrouter.com/ */}
-            <BrowserRouter>
-                {isAuthenticated
-                    ? <>
-                        <Routes>
-                            <Route path="/" element={<Subcomponent />} />
-                        </Routes>
-                    </>
-                    : <NoAuth />
-                }
-            </BrowserRouter>
+            {/* Error boundary explained in https://reactjs.org/docs/error-boundaries.html */}
+            <ErrorHandler>
+                {/* Routing explained in https://reactrouter.com/ */}
+                <BrowserRouter>
+                    {isAuthenticated
+                        ? <>
+                            <Routes>
+                                <Route path="/" element={<Subcomponent />} />
+                            </Routes>
+                        </>
+                        : <NoAuth />
+                    }
+                </BrowserRouter>
+            </ErrorHandler>
         </ThemeProvider>
     )
 }
