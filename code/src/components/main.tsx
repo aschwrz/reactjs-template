@@ -1,13 +1,18 @@
-import { Button, Checkbox } from '@mui/material';
 import { ThemeProvider } from '@mui/material/styles';
-import { Box } from '@mui/system';
-import React from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { CustomTheme } from '../theme/theme';
+import { Subcomponent } from './subcomponent/subcomponent';
 
 export const Main = () => {
     return (
+        // Theming explained in  https://mui.com/customization/default-theme/
         <ThemeProvider theme={CustomTheme.getTheme()}>
-            <Box> main </Box>
+            {/* Routing explained in https://reactrouter.com/ */}
+            <BrowserRouter>
+                <Routes>
+                    <Route path="/" element={<Subcomponent />} />
+                </Routes>
+            </BrowserRouter>
         </ThemeProvider>
     )
 }
