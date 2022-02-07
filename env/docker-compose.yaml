@@ -1,0 +1,10 @@
+version: '3'
+services:
+  nginx: 
+    image: nginx:latest
+    container_name: nginx-reverse-proxy
+    network_mode: host
+    volumes:
+      - ./nginx-reverse-proxy.conf:/etc/nginx/conf.d/nginx-reverse-proxy.conf
+    ports:
+      - 8080:8080
